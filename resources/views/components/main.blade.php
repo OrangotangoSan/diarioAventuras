@@ -1,5 +1,5 @@
 <main role="main">
-    <!-- a parte do form tem que ter csrf, é como se fosse prepared. Todo post -->
+    <!-- a parte do form tem que ter csrf, é como se fosse prepared. Todo post. form tem que ter enctype -->
 
     <section class="jumbotron text-center">
       <div class="container">
@@ -7,7 +7,7 @@
         <form method="POST" action="/" enctype="multipart/form-data">
           @csrf
           <div class="form-group text-left">
-            <label for="email">Conte sobre o lugar!</label>
+            <label for="local">Conte sobre o lugar!</label>
             <input type="text" class="form-control" id="local" name="local" placeholder="Local">
           </div>
           <div class="form-group text-left">
