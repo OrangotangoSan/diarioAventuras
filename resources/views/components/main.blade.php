@@ -7,8 +7,8 @@
         <form method="POST" action="/" enctype="multipart/form-data">
           @csrf
           <div class="form-group text-left">
-            <label for="email">Endereço de e-mail</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="nome@dominio.com">
+            <label for="email">Conte sobre o lugar!</label>
+            <input type="text" class="form-control" id="local" name="local" placeholder="Local">
           </div>
           <div class="form-group text-left">
             <label for="mensagem">Sua mensagem</label>
@@ -34,7 +34,7 @@
                     <div class="card mb-4 shadow-sm">
                     <img class="card-img-top figure-img img-fluid rounded" src="">
                     <div class="card-body">
-                        <p class="card-text">{{$post->email}}</p>
+                        <p class="card-text">{{$post->local}}</p>
                     <p class="card-text">{{$post->mensagem}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
