@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 
+
 class PostController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $post = Post::all();
+        return view('home', ['post' => $post]);
     }
 
     /**
@@ -35,7 +37,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post -> email    = $request -> input('email');
+        $post -> mensagem = $request -> input('mensagem');
+        $post -> arquivo  = ''; //$request -> input('arquivo');
+        $post -> save();
+        return redirect('/');
+
+
+
+
     }
 
     /**

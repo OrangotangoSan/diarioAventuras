@@ -12,7 +12,7 @@
 @endcomponent
 
 
-@component('components.main')
+@component('components.main', ["collectionoPosts" => $post])
 @endcomponent
 
 
