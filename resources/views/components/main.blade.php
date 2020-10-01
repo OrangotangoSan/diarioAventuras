@@ -4,6 +4,7 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Escreva aqui sua nova Aventura</h1>
+        <!-- aqui está o enctype -->
         <form method="POST" action="/" enctype="multipart/form-data">
           @csrf
           <div class="form-group text-left">
@@ -16,7 +17,7 @@
           </div>
           <div class="custom-file">
             <input type="file" class="custom-file-input" id="arquivo" name="arquivo">
-            <label class="custom-file-label" for="arquivo">Escolha um arquivo</label>
+            <label class="custom-file-label" for="arquivo">Escolha uma foto!</label>
           </div>
           <p>
             <button type="submit" class="btn btn-primary my-2">Enviar</button>
@@ -32,7 +33,7 @@
             @foreach ($collectionoPosts as $post)
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                    <img class="card-img-top figure-img img-fluid rounded" src="">
+                    <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{$post->arquivo}}">
                     <div class="card-body">
                         <p class="card-text">{{$post->local}}</p>
                     <p class="card-text">{{$post->mensagem}}</p>
