@@ -40,7 +40,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <a type="button" class="btn btn-sm btn-outline-secondary" href="#">Download</a>
-                            <form>
+                        <form method="POST" action="/{{$post->id}}">
+                                <!--csrf do delete -->
                             @csrf
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-sm btn-outline-danger">Apagar</button>
