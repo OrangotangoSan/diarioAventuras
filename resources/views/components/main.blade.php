@@ -39,7 +39,7 @@
                     <p class="card-text">{{$post->mensagem}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <a type="button" class="btn btn-sm btn-outline-secondary" href="#">Download</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" href="/download/{{$post->id}}">Download</a>
                         <form method="POST" action="/{{$post->id}}">
                                 <!--csrf do delete -->
                             @csrf

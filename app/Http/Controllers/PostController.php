@@ -53,6 +53,19 @@ class PostController extends Controller
 
     }
 
+    //aqui o download
+    public function download ($id)
+    {
+        $post = Post::find($id);
+        if (isset($post)){
+            //não encontra getDriver !!!! esse erro não sai, mas funciona
+            $path = Storage::disk('public')->getDriver()->getAdapter()->applyPathPrefix($post->arquivo);
+            return response()->download($path);
+        }
+        return redirect('/');
+    }
+
+
     /**
      * Display the specified resource.
      *
