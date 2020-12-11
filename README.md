@@ -4,9 +4,13 @@
  #primeiros passos
 
     - Faça o download do código
-    - crie uma database com mysql chamada "aventuras"
+    - crie uma database com mysql chamada "laravel"
+    - faça as configurações de acesso com ".env.example" e depois altere o nome para ".env"
     - abra um terminal na pasta diarioaventuras e rode os seguintes comandos:
+            . composer install
             . php artisan migrate
             . php artisan storage:link
+            . php artisan key:generate 
             . php artisan serve
+
     - acesse o "localhost:8000/" pelo navegador
